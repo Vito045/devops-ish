@@ -56,6 +56,9 @@ app.use(
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Hi there');
+});
 app.use('/api/v1/posts', postRouter);
 app.use('/api/v1/users', userRouter);
 
