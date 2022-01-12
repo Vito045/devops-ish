@@ -56,11 +56,11 @@ app.use(
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.send('Hi there');
 });
-app.use('/api/v1/posts', postRouter);
-app.use('/api/v1/users', userRouter);
+// app.use('/api/v1/posts', postRouter);
+// app.use('/api/v1/users', userRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
